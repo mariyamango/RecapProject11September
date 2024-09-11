@@ -9,12 +9,12 @@ public class OrderMapRepo implements OrderRepo{
     private Map<Integer,Order> orderMap;
 
     public OrderMapRepo() {
-        orderMap = new HashMap<Integer,Order>();
+        orderMap = new HashMap<>();
     }
 
     @Override
     public List<Order> getOrdertList() {
-        return new ArrayList<Order>(orderMap.values());
+        return new ArrayList<>(orderMap.values());
     }
 
     @Override
@@ -24,7 +24,7 @@ public class OrderMapRepo implements OrderRepo{
 
     @Override
     public void addOrder(Order order) {
-        orderMap.put(order.id(), order);
+        orderMap.put(order.getId(), order);
     }
 
     @Override

@@ -20,7 +20,7 @@ public class OrderListRepo implements OrderRepo{
 
     public Order getOrderById(int id) {
         for (Order order : orders) {
-            if (order.id() == id) {
+            if (order.getId() == id) {
                 return order;
             }
         }
@@ -33,7 +33,7 @@ public class OrderListRepo implements OrderRepo{
 
     public void removeOrder(int id) {
         for (Order order : orders) {
-            if (order.id() == id) {
+            if (order.getId() == id) {
                 orders.remove(order);
                 return;
             }

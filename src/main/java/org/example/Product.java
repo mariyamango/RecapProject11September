@@ -1,5 +1,7 @@
 package org.example;
 
-public record Product(int id, String name, double price, String description) {
+import java.math.BigDecimal;
+
+public record Product(int id, String name, BigDecimal price, String description) {
 
 }

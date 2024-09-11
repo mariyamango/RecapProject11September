@@ -7,11 +7,11 @@ public class ProductRepo {
     private List<Product> products;
 
     public ProductRepo(List<Product> products) {
-        this.products = new ArrayList<Product>(products);
+        this.products = new ArrayList<>(products);
     }
 
     public ProductRepo() {
-        this.products = new ArrayList<Product>();
+        this.products = new ArrayList<>();
     }
 
     public List<Product> getProductList() {
