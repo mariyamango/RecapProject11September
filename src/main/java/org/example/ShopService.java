@@ -1,5 +1,7 @@
 package org.example;
 
+import static org.example.Main.*;
+
 public class ShopService {
     private ProductRepo productRepo;
     private OrderRepo orderRepo;
@@ -22,7 +24,7 @@ public class ShopService {
             }
         }
         orderRepo.addOrder(order);
-        System.out.println("Order with id " + order.getId() + " placed successfully. Total price: " + order.getTotalPrice());
+        System.out.println(ANSI_GREEN_BOLD + "Order with id " + order.getId() + " placed successfully. Total price: " + order.getTotalPrice() + ANSI_RESET);
     }
 
     public void updateProductQuantity(int orderId, Product product, int newQuantity) {
@@ -31,6 +33,6 @@ public class ShopService {
             System.out.println("Order with id " + orderId + " does not exist.");
         }
         order.setProductQuantity(product, newQuantity);
-        System.out.println("Order with id " + orderId + " updated successfully. Total price: " + order.getTotalPrice());
+        System.out.println(ANSI_GREEN_BOLD + "Order with id " + orderId + " updated successfully. Total price: " + order.getTotalPrice() + ANSI_RESET);
     }
 }
