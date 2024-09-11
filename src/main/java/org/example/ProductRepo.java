@@ -20,7 +20,7 @@ public class ProductRepo {
 
     public Product getProductById(int id) {
         for (Product product : products) {
-            if (product.getId() == id) {
+            if (product.id() == id) {
                 return product;
             }
         }
@@ -33,7 +33,7 @@ public class ProductRepo {
 
     public void removeProduct(int id) {
         for (Product product : products) {
-            if (product.getId() == id) {
+            if (product.id() == id) {
                 products.remove(product);
                 return;
             }
@@ -45,7 +45,6 @@ public class ProductRepo {
         if (products.isEmpty()) {
             return "No products found.";
         }
-        System.out.println("Product List: ");
         StringBuilder sb = new StringBuilder();
         for (Product product : products) {
             sb.append(product);
