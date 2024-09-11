@@ -37,8 +37,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        boolean on = true;
+        String filePath = "src/main/resources/products.csv";
+        CSVFileReader.processCSVFile(productRepo, filePath);
 
+        boolean on = true;
         while (on) {
             printMenu();
             String option = scanner.nextLine();
