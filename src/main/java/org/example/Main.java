@@ -58,7 +58,7 @@ public class Main {
         System.out.println("--------------------------------------------------------------------");
         System.out.println();
 
-        System.out.println("Prices and quantity added:");
+        System.out.println("Manipulations with prices and quantity:");
         System.out.println("Total price of order number " + order1.getId() + " is: " + order1.getTotalPrice());
         shopServiceMap.updateProductQuantity(1, milk, 1);
     }
